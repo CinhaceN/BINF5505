@@ -26,13 +26,13 @@ data['Status'] = data['Status'].astype(bool)
 
 # Fit the Kaplan-Meier estimator
 kmf = KaplanMeierFitter()
-kmf.fit(data['Age'], event_observed=data['Smoking Status'])
+kmf.fit(data['Age'], event_observed=data['Status'])
 
 # Plot the Kaplan-Meier curve
 kmf.plot_survival_function()
 plt.title('Kaplan-Meier Curve')
 plt.xlabel('Age')
-plt.ylabel('Smoking Status')
+plt.ylabel('Status')
 plt.show()
 
 # Cox Proportional Hazards Model
